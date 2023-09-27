@@ -33,19 +33,6 @@ body{
     height: 20vw;
 }
 
-@media only screen and (min-width: 600px) {
- 
-    #logo{
-        margin-top: -50vw;
-    }
-    
-    .button-1{
-        height: 5vw;
-        width: 25vw;
-        margin-left: 33vw;
-    }
-        
-}
 
 .info{
     font-size: 5vw;
@@ -56,8 +43,45 @@ body{
     margin-left: 25vw;
 }
 
+
+@media only screen and (min-width: 600px) {
+  
+    .button-1{
+        height: 5vw;
+        width: 25vw;
+        margin-left: 33vw;
+    }
+
+    #logo{
+        width: 25vw;
+        height: 25vw;
+        margin-left: 33vw;
+        margin-top: 0vw;
+    }
+
+    #espaco-1{
+        height: 0vw;
+    }
+
+    .info{
+        font-size: 2vw;
+        margin-left: 33vw;
+    }
+
+    .center-1{
+        margin-left: 33vw;
+    }
+        
+}
+
+
+
 .img-apps{
     width: 10vw;
     height: 10vw;
 }
 
+.flex{
+    display: flex;
+    flex-direction: row;
+}
