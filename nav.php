@@ -1,12 +1,13 @@
 <?php
-
+echo ' <nav>';
     $nav_button=function ($i){
         $areas=['feed','menu','seguidores','opções'];
-        return '<button class="botao_nav">
+        $href=['index.php','index.php','index.php','index.php'];
+        return '<a href="'.$href[$i].'"><button class="botao_nav">
     <div class="meio_botao">
         <div class="circulo margem_padrao botao_circular2"></div><h1 class="nav_botao_area">'.$areas[$i].'</h1>
     </div>
-</button>';
+</button></a>';
 };
 
 echo $nav_button(0);

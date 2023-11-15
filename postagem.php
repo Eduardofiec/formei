@@ -3,7 +3,7 @@ $texto_postagem=["aaaa","bbbbbb","cccc","ddddd","eeeeee","ffffffff"];
 
 include_once("conexao.php");
 $counter=0;
-$select=$conexao->query("SELECT cliente.cliente_id, cliente.nome, cliente.idade, cliente.profissao, cliente.contato, cliente.email FROM cliente;");
+$select=$conexao->query("SELECT cliente.cliente_id, cliente.nome, cliente.idade, cliente.profissao, cliente.contato, cliente.email, postagem.texto FROM cliente left join postagem on postagem.postagem_id=cliente.postagem_id;");
 while($linha=$select -> fetch(PDO::FETCH_ASSOC)) {
     if($counter==0){
         echo "<div class='duas_postagens'>";
@@ -18,7 +18,7 @@ echo '
              <h3 class="oficio fonte_padrao fonte_cor_padrao">engenheiro nuclear na Nasa</h3>
          </div>
      </div>
- <h2 class="texto_postagem">'.$linha['nome'].'</h2>
+ <h2 class="texto_postagem">'.$linha['texto'].'</h2>
  <div class="interagir_postagem">
      <img class="interagir" src="like.png">
      <img class="interagir deslike" src="like.png">
